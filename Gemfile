@@ -51,3 +51,15 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
 
 gem 'rb-readline'
+
+# To answer for 'No Access-Control-Allow-Origin header present'
+gem 'rack-cors', :require => 'rack/cors'
+
+# Has secured password
+gem 'bcrypt', '~> 3.1.7'
+
+# JWT token generation
+gem 'jwt'
+
+# facilitate the contoller and model
+gem 'simple_command'
