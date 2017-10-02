@@ -1,3 +1,3 @@
-class Api::V1::OrderItemsController < Api::V1::ApiController
+class Api::V1::OrderItemsController < ApplicationController
 
 end

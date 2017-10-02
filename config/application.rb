@@ -31,10 +31,10 @@ module OphApp
     config.api_only = true
 
     # Middleware config
-    config.middleware.use Rack::MethodOverride
-    config.middleware.use ActionDispatch::Flash
-    config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore
+    # config.middleware.use Rack::MethodOverride
+    # config.middleware.use ActionDispatch::Flash
+    # config.middleware.use ActionDispatch::Cookies
+    # config.middleware.use ActionDispatch::Session::CookieStore
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins 'http://localhost:3000'

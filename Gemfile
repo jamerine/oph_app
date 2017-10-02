@@ -58,7 +58,7 @@ gem 'rack-cors', :require => 'rack/cors'
 # Has secured password
 gem 'bcrypt', '~> 3.1.7'
 
-# JWT token generation
+# Authentication
 gem 'jwt'
 
 # facilitate the contoller and model

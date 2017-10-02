@@ -1,4 +1,6 @@
-class Api::V1::ProductsController < Api::V1::ApiController
+class Api::V1::ProductsController < ApplicationController
+  # before_action :authenticate_user
+  
   def index
     @products = Product.where(online_order_item: true).order(:product_type)
     render json: @products.to_json

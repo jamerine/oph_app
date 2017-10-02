@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
 
   # Authentication
-  post 'authenticate', to: 'authentication#authenticate'
+
 
   # Api definition
   namespace :api do
@@ -11,7 +9,7 @@ Rails.application.routes.draw do
       resources :products
       resources :order_items
       resources :orders
-      resources :users
+      post 'login', to: "sessions#create"
     end
   end
 
