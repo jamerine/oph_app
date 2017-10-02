@@ -9,17 +9,14 @@ class OrderContainer extends Component {
     super(props)
     this.state = {
       order: {
-        order_status_id: 1,
-        subtotal: 0
+        order_status_id: 1
       }
     }
   }
 
   componentDidMount() {
     const order = this.state.order
-    axios.post('http://localhost:3001/api/v1/orders', {
-        order: order
-      })
+    axios.post('http://localhost:3001/api/v1/orders', {order: order})
       .then(response => {
         this.setState({order: response.data})
       })

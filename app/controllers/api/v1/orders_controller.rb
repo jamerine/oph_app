@@ -1,9 +1,11 @@
 class Api::V1::OrdersController < Api::V1::ApiController
 
+
   def create
-    @order = Order.create(order_params)
+    @order = current_order
     render json: @order
   end
+
 
 
   private
